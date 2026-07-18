@@ -8,6 +8,7 @@ Each task is organized in its own directory with its own dedicated documentation
 
 - [Task 1: Data Immersion & Wrangling](file:///f:/Data%20Analytics%20Internship%20Portfolio/task1/README.md) - Contains data dictionary, quality assessment, and cleaning pipeline script.
 - [Task 2: Exploratory Data Analysis (EDA) & Business Intelligence](file:///f:/Data%20Analytics%20Internship%20Portfolio/task2/README.md) - Contains descriptive stats, visualizations, relational SQLite SQL queries, and a premium dashboard mockup.
+- [Task 3: Deep-Dive Analysis & Interactive Dashboarding](file:///f:/Data%20Analytics%20Internship%20Portfolio/task3/README.md) - Contains customer RFM segmentation, interactive HTML/JS dashboard hosted via GitHub Pages, and strategic business analysis.
 - ... (Additional tasks will be structured similarly)
 
 ## Dataset
