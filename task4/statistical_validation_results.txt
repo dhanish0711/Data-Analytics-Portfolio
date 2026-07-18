@@ -1,0 +1,47 @@
+=== STATISTICAL VALIDATION & HYPOTHESIS TESTING RESULTS ===
+
+### Two-Sample Independent Welch's T-Test
+Hypothesis:
+- Null Hypothesis (H0): Mean Weekday Spend = Mean Weekend Spend
+- Alternative Hypothesis (H1): Mean Weekday Spend != Mean Weekend Spend
+
+Summary Statistics:
+- Weekdays: n = 712, mean = ₹141893.71, std = ₹114380.54
+- Weekends: n = 288, mean = ₹133233.06, std = ₹113365.90
+
+Test Results:
+- t-statistic: 1.0911
+- p-value: 0.2757
+- Degrees of Freedom: 535.37
+- Mean Difference: ₹8660.65
+- 95% Confidence Interval of Difference: [₹-6931.24, ₹24252.54]
+
+Conclusion: The difference in average transaction values between weekdays and weekends is NOT STATISTICALLY SIGNIFICANT (alpha = 0.05).
+We fail to reject the null hypothesis H0. There is no statistical evidence that weekday and weekend transactions generate different mean spends.
+
+================================================================================
+
+### Chi-Squared Test of Independence
+Hypothesis:
+- Null Hypothesis (H0): Gender and Product Category choice are independent.
+- Alternative Hypothesis (H1): Gender and Product Category choice are associated.
+
+Observed Contingency Table:
+Category  Education  Electronics  Fashion  Furniture  Grocery
+Gender                                                       
+Female           96          158       89         74       72
+Male             82          196       67         85       81
+
+Expected Frequencies Table:
+Category  Education  Electronics  Fashion  Furniture  Grocery
+Gender                                                       
+Female        87.04       173.11    76.28      77.75    74.82
+Male          90.96       180.89    79.72      81.25    78.18
+
+Test Results:
+- Chi-Squared statistic: 9.0936
+- p-value: 0.0588
+- Degrees of Freedom: 4
+
+Conclusion: The association between customer gender and product category choice is NOT STATISTICALLY SIGNIFICANT (alpha = 0.05).
+We fail to reject the null hypothesis H0. Gender and Product Category are independent of each other.

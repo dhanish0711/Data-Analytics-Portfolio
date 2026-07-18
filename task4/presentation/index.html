@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Performance & Customer Strategy Presentation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        cardBg: 'rgba(30, 41, 59, 0.5)',
+                        borderGlow: 'rgba(99, 102, 241, 0.2)',
+                        accentPurple: '#818cf8',
+                        accentBlue: '#38bdf8',
+                        accentGreen: '#34d399',
+                        accentCoral: '#f87171',
+                        accentGold: '#fbbf24'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b0f19;
+            background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        .slide {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .kpi-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col justify-between p-4 md:p-6">
+
+    <!-- Top Navigation / Progress -->
+    <header class="max-w-7xl w-full mx-auto flex items-center justify-between py-3 px-8 glass-card rounded-full mb-4">
+        <div class="flex items-center gap-3">
+            <span class="w-3.5 h-3.5 rounded-full bg-indigo-500 animate-pulse"></span>
+            <span class="text-xs md:text-sm font-bold tracking-widest text-slate-300 uppercase heading-font">Sales Analytics & Customer Strategy</span>
+        </div>
+        <div class="w-1/3 bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div id="progress-bar" class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full transition-all duration-300" style="width: 10%;"></div>
+        </div>
+        <div class="text-xs md:text-sm font-bold text-slate-300 heading-font" id="slide-number">Slide 1 of 10</div>
+    </header>
+
+    <!-- Main Presentation Container -->
+    <main class="max-w-7xl w-full mx-auto flex-grow flex items-center justify-center my-2">
+        <div class="w-full min-h-[580px] md:min-h-[660px] glass-card rounded-3xl p-8 md:p-14 relative overflow-hidden flex flex-col justify-between">
+            
+            <!-- Slide 1: Cover -->
+            <div class="slide opacity-100 scale-100 absolute inset-8 md:inset-14 flex flex-col justify-center items-center text-center space-y-6">
+                <div class="bg-indigo-500/10 border border-indigo-500/25 px-4 py-1.5 rounded-full text-xs font-bold text-indigo-300 uppercase tracking-widest heading-font">
+                    Interactive Presentation Deck
+                </div>
+                <h1 class="heading-font text-3xl md:text-6xl font-extrabold tracking-tight gradient-text leading-tight max-w-4xl">
+                    ApexPlanet Sales Performance & Customer Strategy
+                </h1>
+                <p class="text-slate-400 text-sm md:text-xl max-w-3xl font-light leading-relaxed">
+                    A comprehensive, data-driven narrative detailing data cleaning audits, exploratory insights, RFM segmentations, and rigorous statistical hypothesis validation.
+                </p>
+                <div class="pt-10 space-y-2">
+                    <p class="text-base md:text-lg font-bold text-slate-200 heading-font tracking-wider">Dhanish Ladwani</p>
+                    <p class="text-xs md:text-sm text-slate-500 uppercase tracking-widest font-semibold">Data Analytics Portfolio Project</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Data Wrangling Rationale (Task 1) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-indigo-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-database"></i> Part 1: Data Wrangling & Sequence Restoration
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Why data cleaning is the most critical first step in any analytical pipeline.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto items-center">
+                    <div class="md:col-span-7 space-y-4 text-xs md:text-base text-slate-300">
+                        <p class="leading-relaxed">
+                            Analyzing raw data directly often leads to flawed business conclusions. In the provided sales transactions dataset, we identified and programmatically resolved three major issues:
+                        </p>
+                        <ul class="space-y-3 list-none pl-1">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-exclamation text-indigo-400 mt-1"></i>
+                                <span><strong class="text-slate-100">Order_ID sequence corruption:</strong> 8 distinct sales transactions (for different customers, dates, and amounts) were all saved under the duplicate ID `ORD100050`.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-exclamation text-indigo-400 mt-1"></i>
+                                <span><strong class="text-slate-100">Missing customer demographics:</strong> 20 transaction records lacked age values. Without imputation, we could not build a reliable target age profile.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-exclamation text-indigo-400 mt-1"></i>
+                                <span><strong class="text-slate-100">Missing customer geographies:</strong> 13 transactions had empty city records, skewing geographic sales tracking.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-5 kpi-card rounded-2xl p-6 md:p-8 text-center border-indigo-500/25 bg-indigo-500/5">
+                        <i class="fa-solid fa-code text-indigo-400 text-5xl mb-4"></i>
+                        <span class="text-sm md:text-base font-bold text-slate-200 heading-font uppercase tracking-wider block">Reproducible Code</span>
+                        <p class="text-xs md:text-sm text-slate-400 mt-3 leading-relaxed">
+                            We implemented a standalone Python pipeline script that handles these anomalies automatically, ensuring any future raw data dumps are cleaned consistently.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 2: Wrangling Strategy</div>
+            </div>
+
+            <!-- Slide 3: Wrangling Execution & Audit (Task 1) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-indigo-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-clipboard-check"></i> Part 1: Cleaning Execution & Audit Log
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Documenting the cleaning operations applied to the 1,000 sales transactions.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-auto">
+                    <div class="kpi-card p-6 rounded-2xl space-y-4">
+                        <h4 class="font-bold text-sm md:text-base text-slate-200 heading-font uppercase tracking-wider border-b border-slate-800 pb-2">Cleaning Log Actions</h4>
+                        <div class="space-y-3 text-xs md:text-sm text-slate-300">
+                            <p class="flex justify-between items-center">
+                                <span>Sequence Corruption Fixed</span>
+                                <span class="bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 text-xs px-2.5 py-0.5 rounded-full font-bold">8 Order IDs</span>
+                            </p>
+                            <p class="flex justify-between items-center">
+                                <span>Age Imputations (Overall Median)</span>
+                                <span class="bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 text-xs px-2.5 py-0.5 rounded-full font-bold">20 Values (Age 41.0)</span>
+                            </p>
+                            <p class="flex justify-between items-center">
+                                <span>City Imputations (Unknown Label)</span>
+                                <span class="bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 text-xs px-2.5 py-0.5 rounded-full font-bold">13 Records</span>
+                            </p>
+                            <p class="flex justify-between items-center">
+                                <span>Data Type Standards Applied</span>
+                                <span class="bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 text-xs px-2.5 py-0.5 rounded-full font-bold">Int32 / Datetime</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="kpi-card rounded-2xl p-6 md:p-8 border-emerald-500/25 bg-emerald-500/5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-sm md:text-base text-slate-200 heading-font uppercase tracking-wider border-b border-emerald-950 pb-2">Quality Audit Verification</h4>
+                            <p class="text-xs md:text-sm text-slate-300 mt-3 leading-relaxed">
+                                The pipeline runs automated assertions post-execution:
+                            </p>
+                            <ul class="text-xs md:text-sm text-slate-400 space-y-1.5 mt-2 pl-4 list-disc">
+                                <li>Asserts that **total remaining null values = 0**.</li>
+                                <li>Asserts that **duplicate Order_ID values = 0**.</li>
+                                <li>Asserts that **Total_Sales matches (Quantity * Unit_Price)**.</li>
+                            </ul>
+                        </div>
+                        <div class="text-[10px] text-emerald-400 font-bold tracking-widest uppercase mt-4 flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-check"></i> All Integrity Constraints Passed
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 3: Audit Logs</div>
+            </div>
+
+            <!-- Slide 4: Key Sales Metrics (Task 2) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-sky-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-chart-column"></i> Part 2: Top-Line Business Metrics
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Uncovering baseline operational volumes, pricing, and revenues.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto items-center">
+                    <div class="md:col-span-5 space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="kpi-card p-4 rounded-xl text-center">
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Total Sales</span>
+                                <span class="text-xl md:text-2xl font-bold text-sky-300 heading-font">₹139.40M</span>
+                            </div>
+                            <div class="kpi-card p-4 rounded-xl text-center">
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Total Orders</span>
+                                <span class="text-xl md:text-2xl font-bold text-sky-300 heading-font">1,000</span>
+                            </div>
+                            <div class="kpi-card p-4 rounded-xl text-center">
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">AOV</span>
+                                <span class="text-xl md:text-2xl font-bold text-sky-300 heading-font">₹1,39,399</span>
+                            </div>
+                            <div class="kpi-card p-4 rounded-xl text-center">
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Avg Cust Age</span>
+                                <span class="text-xl md:text-2xl font-bold text-sky-300 heading-font">41.3 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 space-y-4 text-xs md:text-base text-slate-300">
+                        <h4 class="font-bold text-slate-200 heading-font">Primary Sales Findings</h4>
+                        <ul class="space-y-2 list-none pl-1">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                                <span><strong class="text-slate-200">Balanced Genders:</strong> Male transactions represent <span class="text-sky-300 font-semibold">51.1%</span>, and Female represent <span class="text-sky-300 font-semibold">48.9%</span>.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                                <span><strong class="text-slate-200">Balanced Geography:</strong> Patna (13.5%), Kolkata (13.3%), Mumbai (13.1%), Delhi (12.5%), and Hyderabad (12.5%) lead.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                                <span><strong class="text-slate-200">Strong Pricing Driver:</strong> Strong correlation (<span class="text-sky-300 font-semibold">0.817</span>) between Unit Price and Sales; Quantity has a moderate correlation (<span class="text-sky-300 font-semibold">0.536</span>).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 4: Baseline KPIs</div>
+            </div>
+
+            <!-- Slide 5: Category & Product Performance (Task 2) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-sky-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-layer-group"></i> Part 2: Product & Category Breakdown
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Identifying top-performing categories and high-ticket products.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto items-center">
+                    <div class="md:col-span-6 space-y-4 text-xs md:text-base text-slate-300">
+                        <p class="leading-relaxed">
+                            Category-level aggregations show a clear revenue hierarchy, with one high-value category representing more than **35% of all sales**:
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center text-xs md:text-sm border-b border-slate-800 pb-1.5">
+                                <span>1. **Electronics** (Laptops & Mobiles)</span>
+                                <strong class="text-sky-300">₹50.78M (36.4%)</strong>
+                            </div>
+                            <div class="flex justify-between items-center text-xs md:text-sm border-b border-slate-800 pb-1.5">
+                                <span>2. **Education** (Books)</span>
+                                <strong class="text-sky-300">₹25.03M (17.9%)</strong>
+                            </div>
+                            <div class="flex justify-between items-center text-xs md:text-sm border-b border-slate-800 pb-1.5">
+                                <span>3. **Grocery** (Rice)</span>
+                                <strong class="text-sky-300">₹22.23M (15.9%)</strong>
+                            </div>
+                            <div class="flex justify-between items-center text-xs md:text-sm border-b border-slate-800 pb-1.5">
+                                <span>4. **Furniture** (Chairs)</span>
+                                <strong class="text-sky-300">₹21.52M (15.4%)</strong>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 italic">
+                            Laptops and Mobiles perform almost identically, generating ₹25.44M and ₹25.34M respectively.
+                        </p>
+                    </div>
+                    <div class="md:col-span-6 flex justify-center">
+                        <img src="images/sales_by_category.png" class="max-h-[220px] md:max-h-[300px] object-contain rounded-2xl border border-slate-700/50 shadow-lg" alt="Sales by Category">
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 5: Product Performance</div>
+            </div>
+
+            <!-- Slide 6: RFM Model Introduction (Task 3) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-emerald-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-address-book"></i> Part 3: Customer Behavioral Modeling (RFM)
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Developing scoring metrics to map buying behavior and customer value.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-auto">
+                    <div class="space-y-4 text-xs md:text-base text-slate-300">
+                        <h4 class="font-bold text-slate-200 heading-font">What is RFM?</h4>
+                        <p class="leading-relaxed text-slate-400">
+                            RFM is a behavioral segmentation model that evaluates three core dimensions to measure customer loyalty and transaction frequency:
+                        </p>
+                        <div class="space-y-3 font-semibold text-xs md:text-sm">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">R</span>
+                                <span>Recency: Days since last order (Lower = more active)</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">F</span>
+                                <span>Frequency: Total orders placed (Higher = more loyal)</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">M</span>
+                                <span>Monetary: Total lifetime spending (Higher = high spender)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpi-card rounded-2xl p-6 md:p-8 flex flex-col justify-center space-y-4 border-emerald-500/20 bg-emerald-500/5">
+                        <h4 class="font-bold text-xs md:text-sm text-slate-200 heading-font uppercase tracking-wider border-b border-emerald-950 pb-2">Custom Bins for Frequency</h4>
+                        <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
+                            Because **94.5%** of our customers have made only **1 transaction**, traditional equal-size quantiles fail. We defined custom rules:
+                        </p>
+                        <ul class="text-xs md:text-sm text-slate-400 space-y-1.5 list-disc pl-4">
+                            <li>**Frequency = 1:** Assigned Score 1 (94.5% of base)</li>
+                            <li>**Frequency = 2:** Assigned Score 3 (5.4% of base)</li>
+                            <li>**Frequency >= 3:** Assigned Score 5 (0.1% of base)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 6: RFM Metrics</div>
+            </div>
+
+            <!-- Slide 7: RFM Customer Segments (Task 3) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-emerald-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-users-viewfinder"></i> Part 3: Customer Segment Distribution
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Profiling the 947 unique customers into behavioral cohorts.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto items-center">
+                    <div class="md:col-span-7 overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="text-slate-400 border-b border-slate-800">
+                                    <th class="pb-2 font-semibold">Cohort</th>
+                                    <th class="pb-2 font-semibold text-center">Customers</th>
+                                    <th class="pb-2 font-semibold text-center">Share</th>
+                                    <th class="pb-2 font-semibold text-right">Action Plan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/50 text-slate-300">
+                                <tr>
+                                    <td class="py-2 font-bold text-emerald-400">Champions</td>
+                                    <td class="py-2 text-center">197</td>
+                                    <td class="py-2 text-center">19.7%</td>
+                                    <td class="py-2 text-right text-slate-400 text-[10px]">VIP rewards, early access</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold text-indigo-400">Loyal Customers</td>
+                                    <td class="py-2 text-center">199</td>
+                                    <td class="py-2 text-center">19.9%</td>
+                                    <td class="py-2 text-right text-slate-400 text-[10px]">Upsell, reviews, loyalty points</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold text-sky-400">New Customers</td>
+                                    <td class="py-2 text-center">134</td>
+                                    <td class="py-2 text-center">13.4%</td>
+                                    <td class="py-2 text-right text-slate-400 text-[10px]">Welcome series, onboarding</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold text-rose-400">At Risk</td>
+                                    <td class="py-2 text-center">152</td>
+                                    <td class="py-2 text-center">15.2%</td>
+                                    <td class="py-2 text-right text-slate-400 text-[10px]">Win-back discounts, survey</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold text-slate-400">Lost / Low-Value</td>
+                                    <td class="py-2 text-center">157</td>
+                                    <td class="py-2 text-center">15.7%</td>
+                                    <td class="py-2 text-right text-slate-400 text-[10px]">Low-cost email reactivation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="md:col-span-5 flex justify-center">
+                        <img src="images/gender_distribution.png" class="max-h-[220px] md:max-h-[300px] object-contain rounded-2xl border border-slate-700/50 shadow-lg" alt="Gender distribution donut">
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 7: RFM Cohorts</div>
+            </div>
+
+            <!-- Slide 8: Welch's T-Test (Task 4) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-amber-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-scale-balanced"></i> Part 4: T-Test (Weekday vs Weekend spends)
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Checking whether the day of week influences average transaction values.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto">
+                    <div class="md:col-span-6 space-y-4 text-xs md:text-base text-slate-300">
+                        <h4 class="font-bold text-slate-200 heading-font">The Hypothesis</h4>
+                        <ul class="space-y-2 list-none pl-1">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold">H0:</span>
+                                <span>Mean Weekday Spend = Mean Weekend Spend (Equal means)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold">H1:</span>
+                                <span>Mean Weekday Spend &ne; Mean Weekend Spend (Unequal means)</span>
+                            </li>
+                        </ul>
+                        <div class="kpi-card p-4 rounded-xl space-y-1.5 text-xs">
+                            <p class="flex justify-between"><span>Weekday Mean Spend (n=712):</span> <strong>₹1,41,893.71</strong></p>
+                            <p class="flex justify-between"><span>Weekend Mean Spend (n=288):</span> <strong>₹1,33,233.06</strong></p>
+                            <p class="flex justify-between border-t border-slate-800 pt-1 font-bold"><span>Mean Difference:</span> <strong>₹8,660.65</strong></p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 kpi-card rounded-2xl p-6 md:p-8 border-red-500/25 bg-red-500/5 flex flex-col justify-between">
+                        <div class="space-y-2 text-xs md:text-sm">
+                            <h4 class="font-bold text-slate-200 heading-font uppercase tracking-wider border-b border-red-950 pb-2">Welch's T-Test Statistics</h4>
+                            <p class="flex justify-between"><span>t-statistic:</span> <strong class="text-slate-100">1.0911</strong></p>
+                            <p class="flex justify-between"><span>p-value:</span> <strong class="text-rose-400 font-bold">0.2757</strong></p>
+                            <p class="flex justify-between"><span>95% Confidence Interval:</span> <strong class="text-slate-100">[-₹6,931.24, ₹24,252.54]</strong></p>
+                        </div>
+                        <div class="mt-4 border-t border-red-900/50 pt-3 text-xs text-slate-300">
+                            <span class="text-rose-400 font-bold uppercase tracking-widest text-[10px] block mb-1">Business Decision</span>
+                            Because the p-value is **0.2757** (greater than 0.05), the difference is **NOT statistically significant**. Weekday and weekend spends are statistically equal.
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 8: Welch's T-Test</div>
+            </div>
+
+            <!-- Slide 9: Chi-Squared Test (Task 4) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-amber-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-venus-mars"></i> Part 4: Gender Preferences (Chi-Square)
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Checking whether gender and product category choice are independent.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto">
+                    <div class="md:col-span-6 space-y-4 text-xs md:text-base text-slate-300">
+                        <h4 class="font-bold text-slate-200 heading-font">The Hypothesis</h4>
+                        <ul class="space-y-2 list-none pl-1">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold">H0:</span>
+                                <span>Gender and Category selection are independent.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 font-bold">H1:</span>
+                                <span>Gender and Category selection are associated (dependent).</span>
+                            </li>
+                        </ul>
+                        <div class="kpi-card p-4 rounded-xl text-xs space-y-2">
+                            <h5 class="font-bold text-slate-200 border-b border-slate-800 pb-1">Minor Observed Preferences</h5>
+                            <p>• Females buy more **Fashion** (89 observed vs 76.28 expected)</p>
+                            <p>• Males buy more **Electronics** (196 observed vs 180.89 expected)</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 kpi-card rounded-2xl p-6 md:p-8 border-red-500/25 bg-red-500/5 flex flex-col justify-between">
+                        <div class="space-y-2 text-xs md:text-sm">
+                            <h4 class="font-bold text-slate-200 heading-font uppercase tracking-wider border-b border-red-950 pb-2">Chi-Squared Statistics</h4>
+                            <p class="flex justify-between"><span>Chi-Squared statistic:</span> <strong class="text-slate-100">9.0936</strong></p>
+                            <p class="flex justify-between"><span>Degrees of freedom:</span> <strong class="text-slate-100">4</strong></p>
+                            <p class="flex justify-between"><span>p-value:</span> <strong class="text-rose-400 font-bold">0.0588</strong></p>
+                        </div>
+                        <div class="mt-4 border-t border-red-900/50 pt-3 text-xs text-slate-300">
+                            <span class="text-rose-400 font-bold uppercase tracking-widest text-[10px] block mb-1">Business Decision</span>
+                            Because the p-value is **0.0588** (slightly above 0.05), category choice is independent of gender at 95% confidence level. Ad placement should remain gender-neutral.
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">Slide 9: Chi-Squared Test</div>
+            </div>
+
+            <!-- Slide 10: Strategic Recommendations & Live Links (Task 4) -->
+            <div class="slide opacity-0 scale-95 pointer-events-none absolute inset-8 md:inset-14 flex flex-col justify-between">
+                <div>
+                    <h2 class="heading-font text-xl md:text-3xl font-bold text-indigo-400 border-b border-slate-700/50 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-lightbulb"></i> Business Recommendations & Live Portfolio
+                    </h2>
+                    <p class="text-xs md:text-base text-slate-400 mt-2">Actionable steps backed by statistical rigor and links to live artifacts.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 my-auto items-center">
+                    <div class="md:col-span-7 space-y-4 text-xs md:text-sm text-slate-300">
+                        <div class="border-l-4 border-emerald-400 pl-3">
+                            <h4 class="font-bold text-slate-200">Reactivate "At Risk" Cohort (15.2% of base)</h4>
+                            <p class="text-xs text-slate-400">Target these past heavy spenders with personalized win-back offers and discounts.</p>
+                        </div>
+                        <div class="border-l-4 border-indigo-400 pl-3">
+                            <h4 class="font-bold text-slate-200">Uniform Weekly Ad-Spend</h4>
+                            <p class="text-xs text-slate-400">Do not pay premiums for weekend ad spots, as spends are statistically identical.</p>
+                        </div>
+                        <div class="border-l-4 border-sky-400 pl-3">
+                            <h4 class="font-bold text-slate-200">Gender-Neutral Product Marketing</h4>
+                            <p class="text-xs text-slate-400">General product categories are statistically independent of gender. Deploy broad campaigns.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 kpi-card p-4 rounded-xl space-y-2 text-xs">
+                        <h4 class="font-bold text-slate-200 border-b border-slate-800 pb-1 uppercase tracking-wider text-[10px] heading-font"><i class="fa-solid fa-globe mr-1"></i> Live Portfolio Links</h4>
+                        <p class="flex justify-between"><span>Repository:</span> <strong class="text-indigo-300"><a href="https://github.com/dhanish0711/Data-Analytics-Portfolio" target="_blank">View on GitHub</a></strong></p>
+                        <p class="flex justify-between"><span>Interactive Dashboard:</span> <strong class="text-emerald-300"><a href="https://dhanish0711.github.io/Data-Analytics-Portfolio/task3/dashboard/index.html" target="_blank">Open Live</a></strong></p>
+                        <p class="flex justify-between"><span>Reveal.js presentation:</span> <strong class="text-sky-300"><a href="https://dhanish0711.github.io/Data-Analytics-Portfolio/task4/presentation/index.html" target="_blank">Open Live</a></strong></p>
+                    </div>
+                </div>
+                <div class="text-xs text-slate-500 text-right uppercase tracking-wider heading-font">End of Presentation</div>
+            </div>
+
+            <!-- Custom Controls Section inside the container -->
+            <div class="flex justify-between items-center pt-5 border-t border-slate-800/80 mt-auto">
+                <button id="btn-prev" class="px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-slate-100 rounded-xl text-xs md:text-sm font-bold transition flex items-center gap-2">
+                    <i class="fa-solid fa-chevron-left"></i> Previous
+                </button>
+                <div class="flex gap-2" id="slide-indicators">
+                    <!-- Dots generated dynamically -->
+                </div>
+                <button id="btn-next" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs md:text-sm font-bold transition flex items-center gap-2">
+                    Next <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl w-full mx-auto text-center py-3 text-xs text-slate-600 heading-font tracking-widest uppercase">
+        Use Arrow Keys (Left / Right) or Spacebar to navigate
+    </footer>
+
+    <!-- Slide Controller JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slide");
+            const progressBar = document.getElementById("progress-bar");
+            const slideNumberText = document.getElementById("slide-number");
+            const btnPrev = document.getElementById("btn-prev");
+            const btnNext = document.getElementById("btn-next");
+            const indicatorsContainer = document.getElementById("slide-indicators");
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // Generate indicator dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement("span");
+                dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${i === 0 ? 'bg-indigo-500 w-4' : 'bg-slate-700 hover:bg-slate-500'}`;
+                dot.addEventListener("click", () => goToSlide(i));
+                indicatorsContainer.appendChild(dot);
+            }
+            const dots = indicatorsContainer.querySelectorAll("span");
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        // Fade in and slide to center
+                        slide.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+                        slide.classList.add("opacity-100", "scale-100");
+                    } else {
+                        // Fade out and shrink slightly
+                        slide.classList.remove("opacity-100", "scale-100");
+                        slide.classList.add("opacity-0", "scale-95", "pointer-events-none");
+                    }
+                });
+
+                // Update Progress bar width
+                const progressPct = ((index + 1) / totalSlides) * 100;
+                progressBar.style.width = `${progressPct}%`;
+
+                // Update text indicators
+                slideNumberText.textContent = `Slide ${index + 1} of ${totalSlides}`;
+
+                // Update dots active state
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.className = "w-4 h-2 rounded-full bg-indigo-500 transition-all duration-300";
+                    } else {
+                        dot.className = "w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 transition-all duration-300";
+                    }
+                });
+
+                // Disable/enable controls at boundary
+                btnPrev.disabled = index === 0;
+                btnPrev.style.opacity = index === 0 ? "0.4" : "1";
+                
+                btnNext.textContent = index === totalSlides - 1 ? "Finish" : "Next";
+                if (index === totalSlides - 1) {
+                    btnNext.classList.remove("bg-indigo-600", "hover:bg-indigo-500");
+                    btnNext.classList.add("bg-emerald-600", "hover:bg-emerald-500");
+                } else {
+                    btnNext.classList.remove("bg-emerald-600", "hover:bg-emerald-500");
+                    btnNext.classList.add("bg-indigo-600", "hover:bg-indigo-500");
+                }
+            };
+
+            const goToSlide = (index) => {
+                if (index >= 0 && index < totalSlides) {
+                    currentIndex = index;
+                    showSlide(currentIndex);
+                }
+            };
+
+            btnPrev.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    goToSlide(currentIndex - 1);
+                }
+            });
+
+            btnNext.addEventListener("click", () => {
+                if (currentIndex < totalSlides - 1) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    // Loop back to start
+                    goToSlide(0);
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowRight" || e.key === " ") {
+                    e.preventDefault();
+                    if (currentIndex < totalSlides - 1) {
+                        goToSlide(currentIndex + 1);
+                    } else {
+                        goToSlide(0);
+                    }
+                } else if (e.key === "ArrowLeft") {
+                    e.preventDefault();
+                    if (currentIndex > 0) {
+                        goToSlide(currentIndex - 1);
+                    }
+                }
+            });
+
+            // Initial render
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>
