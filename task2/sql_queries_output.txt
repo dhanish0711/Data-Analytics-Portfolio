@@ -1,0 +1,176 @@
+=== SQL BUSINESS QUESTIONS & QUERY RESULTS ===
+
+### Question 1: Total Revenue and Sales Volume by Product Category
+**Description:** Show total sales revenue and total quantity sold for each product category, ordered by revenue descending.
+
+```sql
+SELECT 
+    p.Category,
+    ROUND(SUM(s.Total_Sales), 2) AS Total_Revenue_INR,
+    SUM(s.Quantity) AS Total_Quantity_Sold,
+    COUNT(s.Order_ID) AS Total_Orders
+FROM sales s
+JOIN products p ON s.Product = p.Product_Name
+GROUP BY p.Category
+ORDER BY Total_Revenue_INR DESC;
+```
+
+**Result Set:**
+
+| Category    |   Total_Revenue_INR |   Total_Quantity_Sold |   Total_Orders |
+|:------------|--------------------:|----------------------:|---------------:|
+| Electronics |         5.07786e+07 |                  1978 |            354 |
+| Education   |         2.50317e+07 |                   977 |            178 |
+| Grocery     |         2.22317e+07 |                   826 |            153 |
+| Furniture   |         2.15216e+07 |                   855 |            159 |
+| Fashion     |         1.98359e+07 |                   799 |            156 |
+
+================================================================================
+
+### Question 2: Top Performing Products within the Electronics Category
+**Description:** Find the top performing products by total sales revenue within the 'Electronics' category.
+
+```sql
+SELECT 
+    s.Product,
+    p.Category,
+    ROUND(SUM(s.Total_Sales), 2) AS Total_Revenue_INR,
+    SUM(s.Quantity) AS Total_Quantity_Sold,
+    ROUND(AVG(s.Unit_Price), 2) AS Avg_Unit_Price_INR
+FROM sales s
+JOIN products p ON s.Product = p.Product_Name
+WHERE p.Category = 'Electronics'
+GROUP BY s.Product
+ORDER BY Total_Revenue_INR DESC;
+```
+
+**Result Set:**
+
+| Product   | Category    |   Total_Revenue_INR |   Total_Quantity_Sold |   Avg_Unit_Price_INR |
+|:----------|:------------|--------------------:|----------------------:|---------------------:|
+| Laptop    | Electronics |         2.5443e+07  |                   970 |              25638.3 |
+| Mobile    | Electronics |         2.53356e+07 |                  1008 |              24728.5 |
+
+================================================================================
+
+### Question 3: Monthly Sales Revenue and Order Count Trends (2025)
+**Description:** Analyze monthly sales performance and transaction volumes for the year 2025.
+
+```sql
+SELECT 
+    strftime('%Y-%m', Order_Date) AS Month,
+    ROUND(SUM(Total_Sales), 2) AS Monthly_Revenue_INR,
+    COUNT(Order_ID) AS Order_Count,
+    SUM(Quantity) AS Total_Quantity_Sold
+FROM sales
+WHERE Order_Date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY Month
+ORDER BY Month ASC;
+```
+
+**Result Set:**
+
+| Month   |   Monthly_Revenue_INR |   Order_Count |   Total_Quantity_Sold |
+|:--------|----------------------:|--------------:|----------------------:|
+| 2025-01 |           1.00962e+07 |            76 |                   376 |
+| 2025-02 |           1.15112e+07 |            86 |                   444 |
+| 2025-03 |           1.30599e+07 |            89 |                   467 |
+| 2025-04 |           1.22227e+07 |            80 |                   482 |
+| 2025-05 |           1.09847e+07 |            85 |                   424 |
+| 2025-06 |           1.29123e+07 |            83 |                   477 |
+| 2025-07 |           1.17462e+07 |            83 |                   466 |
+| 2025-08 |           9.44847e+06 |            75 |                   391 |
+| 2025-09 |           9.1799e+06  |            79 |                   406 |
+| 2025-10 |           1.25009e+07 |            84 |                   485 |
+| 2025-11 |           1.26276e+07 |            77 |                   460 |
+| 2025-12 |           1.22999e+07 |            98 |                   533 |
+
+================================================================================
+
+### Question 4: Geographical Sales Performance by City and Region
+**Description:** Calculate total revenue, order count, and average order value (AOV) for each city and its region using a multi-table join.
+
+```sql
+SELECT 
+    s.City,
+    r.Region,
+    ROUND(SUM(s.Total_Sales), 2) AS Total_Revenue_INR,
+    COUNT(s.Order_ID) AS Order_Count,
+    ROUND(AVG(s.Total_Sales), 2) AS Average_Order_Value_INR
+FROM sales s
+JOIN regions r ON s.City = r.City
+GROUP BY s.City, r.Region
+ORDER BY Total_Revenue_INR DESC;
+```
+
+**Result Set:**
+
+| City      | Region   |   Total_Revenue_INR |   Order_Count |   Average_Order_Value_INR |
+|:----------|:---------|--------------------:|--------------:|--------------------------:|
+| Patna     | East     |         1.9286e+07  |           135 |                    142859 |
+| Kolkata   | East     |         1.88843e+07 |           133 |                    141988 |
+| Bengaluru | South    |         1.87736e+07 |           122 |                    153882 |
+| Mumbai    | West     |         1.87571e+07 |           131 |                    143184 |
+| Hyderabad | South    |         1.71668e+07 |           125 |                    137334 |
+| Delhi     | North    |         1.60971e+07 |           125 |                    128777 |
+| Pune      | West     |         1.45132e+07 |            99 |                    146598 |
+| Gaya      | East     |         1.43809e+07 |           117 |                    122913 |
+| Unknown   | Unknown  |         1.54062e+06 |            13 |                    118509 |
+
+================================================================================
+
+### Question 5: Top 5 High-Value Customers by Revenue
+**Description:** Identify the top 5 customers who spent the most money and show their order count and average transaction size.
+
+```sql
+SELECT 
+    Customer_ID,
+    Customer_Name,
+    ROUND(SUM(Total_Sales), 2) AS Total_Spend_INR,
+    COUNT(Order_ID) AS Order_Count,
+    ROUND(AVG(Total_Sales), 2) AS Avg_Order_Size_INR
+FROM sales
+GROUP BY Customer_ID, Customer_Name
+ORDER BY Total_Spend_INR DESC
+LIMIT 5;
+```
+
+**Result Set:**
+
+| Customer_ID   | Customer_Name   |   Total_Spend_INR |   Order_Count |   Avg_Order_Size_INR |
+|:--------------|:----------------|------------------:|--------------:|---------------------:|
+| CUST2062      | Customer_254    |            493678 |             1 |               493678 |
+| CUST4706      | Customer_200    |            492174 |             1 |               492174 |
+| CUST1711      | Customer_36     |            490866 |             1 |               490866 |
+| CUST4869      | Customer_392    |            485668 |             1 |               485668 |
+| CUST7416      | Customer_191    |            482552 |             1 |               482552 |
+
+================================================================================
+
+### Question 6: Weekday vs. Weekend Sales Performance Comparison
+**Description:** Compare total revenue, total quantity, and average order size between weekdays and weekends.
+
+```sql
+SELECT 
+    CASE 
+        -- strftime('%w', Order_Date) returns '0' for Sunday and '6' for Saturday
+        WHEN strftime('%w', Order_Date) IN ('0', '6') THEN 'Weekend'
+        ELSE 'Weekday'
+    END AS Day_Type,
+    ROUND(SUM(Total_Sales), 2) AS Total_Revenue_INR,
+    SUM(Quantity) AS Total_Quantity_Sold,
+    COUNT(Order_ID) AS Order_Count,
+    ROUND(AVG(Total_Sales), 2) AS Average_Order_Value_INR
+FROM sales
+GROUP BY Day_Type;
+```
+
+**Result Set:**
+
+| Day_Type   |   Total_Revenue_INR |   Total_Quantity_Sold |   Order_Count |   Average_Order_Value_INR |
+|:-----------|--------------------:|----------------------:|--------------:|--------------------------:|
+| Weekday    |         1.01028e+08 |                  3929 |           712 |                    141894 |
+| Weekend    |         3.83711e+07 |                  1506 |           288 |                    133233 |
+
+================================================================================
+

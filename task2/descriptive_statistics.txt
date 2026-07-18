@@ -1,0 +1,69 @@
+=== DESCRIPTIVE STATISTICS & UNIVARIATE ANALYSIS ===
+
+--- Numerical Variables Summary ---
+               Age     Quantity    Unit_Price    Total_Sales
+count  1000.000000  1000.000000   1000.000000    1000.000000
+mean     41.353000     5.435000  25486.783410  139399.439650
+std      13.683626     2.838632  14179.402361  114100.051546
+min      18.000000     1.000000    145.780000     437.340000
+25%      30.000000     3.000000  13895.722500   47066.632500
+50%      41.000000     5.000000  25398.740000  108594.025000
+75%      53.000000     8.000000  37512.382500  203722.882500
+max      65.000000    10.000000  49997.530000  493677.500000
+
+--- Categorical Variables Summaries ---
+--- Categorical Summary: Gender ---
+        Count  Percentage
+Gender                   
+Male      511        51.1
+Female    489        48.9
+
+--- Categorical Summary: City ---
+           Count  Percentage
+City                        
+Patna        135        13.5
+Kolkata      133        13.3
+Mumbai       131        13.1
+Delhi        125        12.5
+Hyderabad    125        12.5
+Bengaluru    122        12.2
+Gaya         117        11.7
+Pune          99         9.9
+Unknown       13         1.3
+
+--- Categorical Summary: Product ---
+         Count  Percentage
+Product                   
+Mobile     184        18.4
+Book       178        17.8
+Laptop     170        17.0
+Chair      159        15.9
+Shoes      156        15.6
+Rice       153        15.3
+
+--- Categorical Summary: Category ---
+             Count  Percentage
+Category                      
+Electronics    354        35.4
+Education      178        17.8
+Furniture      159        15.9
+Fashion        156        15.6
+Grocery        153        15.3
+
+--- Categorical Summary: Age_Group ---
+                     Count  Percentage
+Age_Group                             
+Adult (31-50)          425        42.5
+Senior (51-65)         307        30.7
+Young Adult (18-30)    268        26.8
+
+--- Categorical Summary: Order_DayOfWeek ---
+                 Count  Percentage
+Order_DayOfWeek                   
+Sunday             153        15.3
+Thursday           150        15.0
+Wednesday          146        14.6
+Friday             146        14.6
+Monday             144        14.4
+Saturday           135        13.5
+Tuesday            126        12.6
