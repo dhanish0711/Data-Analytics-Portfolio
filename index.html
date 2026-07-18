@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanish Ladwani | Data Analytics Internship Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        cardBg: 'rgba(30, 41, 59, 0.45)',
+                        borderGlow: 'rgba(99, 102, 241, 0.15)',
+                        accentPurple: '#818cf8',
+                        accentBlue: '#38bdf8',
+                        accentGreen: '#34d399',
+                        accentCoral: '#f87171',
+                        accentGold: '#fbbf24',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Glassmorphism Styles -->
+    <style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b0f19;
+            background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-glow:hover {
+            border-color: rgba(129, 140, 248, 0.4);
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen p-4 md:p-8 flex flex-col justify-between">
+
+    <div class="max-w-6xl w-full mx-auto space-y-8">
+        
+        <!-- Hero Section -->
+        <header class="p-8 md:p-12 glass-card rounded-3xl relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="bg-indigo-500/10 border border-indigo-500/25 px-4 py-1 rounded-full text-xs font-bold text-indigo-300 uppercase tracking-widest heading-font inline-block">
+                    Internship Capstone Portfolio
+                </div>
+                <h1 class="heading-font text-3xl md:text-5xl font-extrabold tracking-tight gradient-text">
+                    Dhanish Ladwani
+                </h1>
+                <p class="text-slate-400 text-sm md:text-lg max-w-2xl font-light leading-relaxed">
+                    A Masterful Consolidation of End-to-End Sales Analytics, Relational Database Modeling, Behavior-Based RFM Segmentation, and Statistical Validation.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
+                    <span class="bg-slate-800 border border-slate-700/60 px-3 py-1 rounded-full text-xs text-slate-300 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-code text-indigo-400"></i> Python</span>
+                    <span class="bg-slate-800 border border-slate-700/60 px-3 py-1 rounded-full text-xs text-slate-300 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-database text-sky-400"></i> SQL</span>
+                    <span class="bg-slate-800 border border-slate-700/60 px-3 py-1 rounded-full text-xs text-slate-300 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-scale-balanced text-amber-400"></i> Statistics</span>
+                    <span class="bg-slate-800 border border-slate-700/60 px-3 py-1 rounded-full text-xs text-slate-300 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-display text-emerald-400"></i> BI Dashboarding</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3 w-full md:w-auto">
+                <a href="task3/dashboard/index.html" class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-bold rounded-xl text-center shadow-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-chart-line"></i> Open Live Dashboard
+                </a>
+                <a href="task4/presentation/index.html" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700/60 font-bold rounded-xl text-center transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-display"></i> View Presentation Slide Deck
+                </a>
+            </div>
+        </header>
+
+        <!-- Project Tasks Grid -->
+        <section class="space-y-6">
+            <h2 class="heading-font text-2xl font-bold text-slate-200 flex items-center gap-2.5">
+                <i class="fa-solid fa-cubes text-indigo-400"></i> Portfolio Core Modules
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Task 1 Card -->
+                <div class="p-6 glass-card rounded-2xl flex flex-col justify-between hover-glow transition duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400"><i class="fa-solid fa-database"></i></span>
+                            <div>
+                                <h3 class="font-bold text-slate-200 heading-font">Task 1: Data Wrangling & Quality</h3>
+                                <span class="text-[10px] text-indigo-400 font-bold tracking-widest uppercase">Data Cleansing Pipeline</span>
+                            </div>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                            Established data integrity by programmatically correcting 8 duplicate transaction order sequences, median-imputing 20 missing customer ages, and standardizing date datatypes.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-3 border-t border-slate-800">
+                        <a href="task1/data_cleaning.py" class="text-xs text-indigo-400 hover:text-indigo-300 font-bold transition flex items-center gap-1"><i class="fa-solid fa-code"></i> Cleaning Code</a>
+                        <a href="task1/README.md" class="text-xs text-slate-400 hover:text-slate-300 font-bold transition">View Readme <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Task 2 Card -->
+                <div class="p-6 glass-card rounded-2xl flex flex-col justify-between hover-glow transition duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400"><i class="fa-solid fa-chart-bar"></i></span>
+                            <div>
+                                <h3 class="font-bold text-slate-200 heading-font">Task 2: EDA & SQL Business Intelligence</h3>
+                                <span class="text-[10px] text-sky-400 font-bold tracking-widest uppercase">Relational Database setup</span>
+                            </div>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                            Normalized the sales transaction table into SQLite tables (`sales`, `products`, `regions`). Executed 6 core business queries mapping category, geographic, and monthly revenue performance.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-3 border-t border-slate-800">
+                        <a href="task2/sql_queries.py" class="text-xs text-sky-400 hover:text-sky-300 font-bold transition flex items-center gap-1"><i class="fa-solid fa-code"></i> SQL Code</a>
+                        <a href="task2/README.md" class="text-xs text-slate-400 hover:text-slate-300 font-bold transition">View Readme <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Task 3 Card -->
+                <div class="p-6 glass-card rounded-2xl flex flex-col justify-between hover-glow transition duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400"><i class="fa-solid fa-users-gear"></i></span>
+                            <div>
+                                <h3 class="font-bold text-slate-200 heading-font">Task 3: Deep-Dive RFM Segmentation</h3>
+                                <span class="text-[10px] text-emerald-400 font-bold tracking-widest uppercase">Behavioral Customer Cohorts</span>
+                            </div>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                            Classified 947 unique customers using Recency, Frequency, and Monetary scores. Identified 6 behavioral segments including Champions (19.7%) and At Risk (15.2%), building strategic marketing win-back plans.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-3 border-t border-slate-800">
+                        <a href="task3/customer_segmentation.py" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold transition flex items-center gap-1"><i class="fa-solid fa-code"></i> Segmentation Code</a>
+                        <a href="task3/README.md" class="text-xs text-slate-400 hover:text-slate-300 font-bold transition">View Readme <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Task 4 Card -->
+                <div class="p-6 glass-card rounded-2xl flex flex-col justify-between hover-glow transition duration-300">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <div>
+                                <h3 class="font-bold text-slate-200 heading-font">Task 4: Data Storytelling & Validation</h3>
+                                <span class="text-[10px] text-amber-400 font-bold tracking-widest uppercase">Statistical Rigor Check</span>
+                            </div>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                            Applied Welch's T-Test and Chi-Squared test of independence to mathematically check spend differences and categorical gender preference. Compiled findings into an interactive 10-slide presentation deck.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-3 border-t border-slate-800">
+                        <a href="task4/statistical_validation.py" class="text-xs text-amber-400 hover:text-amber-300 font-bold transition flex items-center gap-1"><i class="fa-solid fa-code"></i> Statistics Code</a>
+                        <a href="task4/README.md" class="text-xs text-slate-400 hover:text-slate-300 font-bold transition">View Readme <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Reflections & Learnings -->
+        <section class="p-8 glass-card rounded-3xl space-y-6">
+            <h2 class="heading-font text-2xl font-bold text-slate-200 flex items-center gap-2.5">
+                <i class="fa-solid fa-lightbulb text-indigo-400"></i> Core Competencies & Reflections
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Learning 1 -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-200 heading-font text-sm flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> 1. Data Integrity & Code
+                    </h4>
+                    <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                        Learned to treat raw data with skepticism. Programmatically auditing sequence gaps and imputing fields systematically ensures downstream BI dashboards are built on verified truth.
+                    </p>
+                </div>
+                <!-- Learning 2 -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-200 heading-font text-sm flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> 2. BI & Customer Behavior
+                    </h4>
+                    <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                        Gained deep experience translating raw transactional history into behavioral groupings. RFM modeling offers high-value targeting metrics, letting businesses focus budgets on At Risk and Champion segments.
+                    </p>
+                </div>
+                <!-- Learning 3 -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-slate-200 heading-font text-sm flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> 3. Statistical Validation
+                    </h4>
+                    <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                        Discovered that raw averages can be misleading. While weekday average order value looked higher, Welch's t-test verified that high variance rendered this gap statistically insignificant, saving marketing resources.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl w-full mx-auto text-center py-6 mt-8 border-t border-slate-800 text-xs text-slate-500 heading-font tracking-wider">
+        Dhanish Ladwani &copy; 2026 | Deployed via GitHub Pages | Data Analytics Internship Capstone
+    </footer>
+
+</body>
+</html>
