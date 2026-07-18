@@ -6,7 +6,7 @@ Welcome to my Data Analytics Internship Portfolio repository! This repository co
 
 Each task is organized in its own directory with its own dedicated documentation and code files:
 
-- `task1/` - [TBD]
+- [Task 1: Data Immersion & Wrangling](file:///f:/Data%20Analytics%20Internship%20Portfolio/task1/README.md) - Contains data dictionary, quality assessment, and cleaning pipeline script.
 - `task2/` - [TBD]
 - ... (Additional tasks will be structured similarly)
 
